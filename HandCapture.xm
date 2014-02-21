@@ -94,7 +94,7 @@ static NSTimer *burstHC;
     if (proximate) {
     	startTime = [NSDate timeIntervalSinceReferenceDate];
     	if (BurstEnabled) {
-    		burstHC = [NSTimer scheduledTimerWithTimeInterval:2.0 target:self selector:@selector(hcBurst) userInfo:nil repeats:NO];
+    		burstHC = [NSTimer scheduledTimerWithTimeInterval:burstTime target:self selector:@selector(hcBurst) userInfo:nil repeats:NO];
     		[burstHC retain];
     	}
         } else {
