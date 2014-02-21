@@ -1,0 +1,8 @@
+Package: org.thebigboss.proximitycam
+Name: ProximityCam
+Depends: mobilesubstrate, firmware (>= 7.0), gsc.proximity-sensor
+Version: 1.0
+Architecture: iphoneos-arm
+Description: Proximity camera snap like some Android smartphones.
+Author: PoomSmart
+Section: Tweaks

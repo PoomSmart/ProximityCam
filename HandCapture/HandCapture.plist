@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>title</key>
+    <string>ProximityCam</string>
+    <key>entry</key>
+    <dict>
+      <key>cell</key>
+      <string>PSLinkCell</string>
+      <key>icon</key>
+      <string>HandCapture.png</string>
+      <key>label</key>
+      <string>ProximityCam</string>
+    </dict>
+    <key>items</key>
+    <array>
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>Enable Proximity Camera Snap</string>
+        <key>footerText</key>
+        <string>This tweak allows you to take photos using the proximity sensor, just like some Andriod smartphones.
+This tweak isn't fully working in landscape mode because the proximity sensor doesn't work in landscape mode unless you lock an orientation or install tweak like SBRotator7. (Tester reported)
+But landscape mode from lockscreen camera does work.
+
+Burst Enabled option allows you to tap and hold the sensor to perform burst capture, stop it by releasing your finger.</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSSwitchCell</string>
+        <key>default</key>
+        <true/>
+        <key>defaults</key>
+        <string>com.PS.HandCapture</string>
+        <key>key</key>
+        <string>PanEnabled</string>
+        <key>label</key>
+        <string>Pan Enabled</string>
+        <key>PostNotification</key>
+        <string>com.PS.HandCapture.prefs</string>
+      </dict>
+      <dict>
+        <key>cell</key>
+        <string>PSSwitchCell</string>
+        <key>default</key>
+        <true/>
+        <key>defaults</key>
+        <string>com.PS.HandCapture</string>
+        <key>key</key>
+        <string>BurstEnabled</string>
+        <key>label</key>
+        <string>Burst Enabled</string>
+        <key>PostNotification</key>
+        <string>com.PS.HandCapture.prefs</string>
+      </dict>
+      <dict>
+		<key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>Capture Interval</string>
+        <key>footerText</key>
+        <string>Set the interval of proximity camera snap, if the interval while the object is in front of the sensor is less than this interval, camera will take a photo for you.</string>
+      </dict>
+      <dict>
+			<key>PostNotification</key>
+			<string>com.PS.HandCapture.prefs</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>1.0</real>
+			<key>defaults</key>
+			<string>com.PS.HandCapture</string>
+			<key>key</key>
+			<string>interval</string>
+			<key>max</key>
+			<real>5.0</real>
+			<key>min</key>
+			<real>0.0</real>
+			<key>showValue</key>
+			<true/>
+		</dict>
+		 <dict>
+		<key>cell</key>
+        <string>PSGroupCell</string>
+        <key>label</key>
+        <string>Burst Interval</string>
+        <key>footerText</key>
+        <string>Set the tap and hold delay before camera takes burst photos for you.</string>
+      </dict>
+      <dict>
+			<key>PostNotification</key>
+			<string>com.PS.HandCapture.prefs</string>
+			<key>cell</key>
+			<string>PSSliderCell</string>
+			<key>default</key>
+			<real>1.7</real>
+			<key>defaults</key>
+			<string>com.PS.HandCapture</string>
+			<key>key</key>
+			<string>Binterval</string>
+			<key>max</key>
+			<real>5.0</real>
+			<key>min</key>
+			<real>0.5</real>
+			<key>showValue</key>
+			<true/>
+		</dict>
+      <dict>
+        <key>cell</key>
+        <string>PSGroupCell</string>
+        <key>footerText</key>
+        <string>© 2013 - 2014 Thuchapol Unprasert
+(@PoomSmart)</string>
+      </dict>
+    </array>
+  </dict>
+</plist>
