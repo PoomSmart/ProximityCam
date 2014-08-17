@@ -83,7 +83,7 @@ static NSTimer *burstHC;
 - (void)_proximityChanged:(NSNotification *)notification
 {
 	SBApplication *runningApp = [(SpringBoard *)self _accessibilityFrontMostApplication];
-    NSString *ident = [runningApp bundleIdentifier];
+	NSString *ident = [runningApp bundleIdentifier];
 	BOOL shouldRun = [ident isEqualToString:@"com.apple.camera"] || ([[[NSBundle mainBundle] bundleIdentifier] isEqualToString:@"com.apple.springboard"] && [self isCameraApp]);
 	BOOL plExist = objc_getClass("PLCameraView") != nil;
 	if (!shouldRun || !plExist) {
@@ -91,7 +91,7 @@ static NSTimer *burstHC;
 		return;
 	}
 	BOOL proximate = [[notification.userInfo objectForKey:@"kSBNotificationKeyState"] boolValue];
-    if (proximate) {
+	if (proximate) {
     	startTime = [NSDate timeIntervalSinceReferenceDate];
     	if (BurstEnabled) {
     		burstHC = [NSTimer scheduledTimerWithTimeInterval:burstTime target:self selector:@selector(hcBurst) userInfo:nil repeats:NO];
