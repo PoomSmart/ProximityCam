@@ -74,7 +74,7 @@ static NSTimer *burstHC;
 	CAMCaptureController *cont = [%c(CAMCaptureController) sharedInstance];
 	if ([cont isReady]) {
 		if (cont.cameraMode == 0 || cont.cameraMode == 4)
-			[self _shutterButtonClicked];
+			[self takePicture];
 	}
 }
 
